@@ -1,0 +1,437 @@
+.become-owner-page {
+  min-height: calc(100vh - 72px);
+  padding: 48px 20px 60px;
+  background:
+    radial-gradient(
+      circle at top left,
+      #fff4ef 0,
+      #f8fafc 35%,
+      #f8fafc 100%
+    );
+}
+
+.become-owner-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.become-owner-header {
+  margin-bottom: 28px;
+}
+
+.become-owner-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.become-owner-header p {
+  margin: 10px 0 0;
+  max-width: 650px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.become-owner-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 34px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.application-section {
+  padding-bottom: 30px;
+}
+
+.application-section + .application-section {
+  padding-top: 30px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.application-section h2 {
+  margin: 0 0 24px;
+  color: #111827;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d7dce3;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.form-group textarea {
+  min-height: 130px;
+  padding: 14px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ff5a1f;
+  box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.12);
+}
+
+.form-group input:disabled,
+.form-group textarea:disabled {
+  background: #f8fafc;
+  cursor: not-allowed;
+}
+
+.application-error {
+  margin-bottom: 20px;
+  padding: 12px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.primary-button,
+.secondary-button {
+  min-height: 46px;
+  padding: 0 20px;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.primary-button {
+  border: 1px solid #ff5a1f;
+  background: #ff5a1f;
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: #e64a16;
+  border-color: #e64a16;
+}
+
+.secondary-button {
+  border: 1px solid #d7dce3;
+  background: #ffffff;
+  color: #111827;
+}
+
+.secondary-button:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.primary-button:active,
+.secondary-button:active {
+  transform: translateY(1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Loading */
+
+.become-owner-loading {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #64748b;
+}
+
+.loading-spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #e5e7eb;
+  border-top-color: #ff5a1f;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Application status cards */
+
+.application-status-card {
+  max-width: 650px;
+  margin: 50px auto 0;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.status-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.application-status-card.pending .status-icon {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.application-status-card.approved .status-icon {
+  background: #ecfdf5;
+  color: #16a34a;
+}
+
+.application-status-card.rejected .status-icon {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.application-status-card h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.status-message {
+  margin: 14px auto 28px;
+  max-width: 560px;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.application-summary {
+  margin: 0 0 24px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.summary-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 52px;
+  padding: 0 16px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span:first-child {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.summary-row strong {
+  color: #111827;
+  font-size: 14px;
+  text-align: right;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.pending-badge {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.approved-badge {
+  background: #ecfdf5;
+  color: #15803d;
+}
+
+.rejected-badge {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.status-help {
+  margin: 0 0 24px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.approved-note,
+.rejection-note {
+  margin: 0 0 24px;
+  padding: 16px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.approved-note {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.rejection-note {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+.approved-note strong,
+.rejection-note strong {
+  color: #111827;
+  font-size: 14px;
+}
+
+.approved-note p,
+.rejection-note p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.status-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 680px) {
+  .become-owner-page {
+    min-height: calc(100vh - 64px);
+    padding: 30px 16px 40px;
+  }
+
+  .become-owner-header h1 {
+    font-size: 27px;
+  }
+
+  .become-owner-card {
+    padding: 24px 18px;
+    border-radius: 14px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .application-section h2 {
+    font-size: 18px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+  }
+
+  .application-status-card {
+    margin-top: 20px;
+    padding: 28px 20px;
+  }
+
+  .application-status-card h1 {
+    font-size: 24px;
+  }
+
+  .summary-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+    padding: 12px 14px;
+  }
+
+  .summary-row strong {
+    text-align: left;
+  }
+
+  .status-actions {
+    flex-direction: column;
+  }
+
+  .status-actions .primary-button,
+  .status-actions .secondary-button {
+    width: 100%;
+  }
+}

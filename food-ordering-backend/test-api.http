@@ -1,0 +1,25 @@
+### Get restaurants
+
+GET http://localhost:8080/api/restaurants
+
+
+### Create restaurant
+
+POST http://localhost:8080/api/restaurants
+Content-Type: application/json
+
+{
+  "name": "Spice Garden",
+  "description": "Authentic Indian cuisine",
+  "ownerId": "owner123",
+  "address": "Main Road, Chennai",
+  "phone": "9876543210",
+  "cuisine": "Indian",
+  "rating": 4.5,
+  "deliveryTime": 30,
+  "priceForTwo": 450,
+  "imageUrl": "https://example.com/spice-garden.jpg",
+  "isApproved": true,
+  "isActive": true,
+  "createdAt": "2026-09-12T12:00:00"
+}

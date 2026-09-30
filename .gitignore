@@ -1,0 +1,28 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Frontend dependencies
+food-ordering-frontend/node_modules/
+
+# Frontend build output
+food-ordering-frontend/dist/
+
+# Backend build output
+food-ordering-backend/target/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local application configuration
+application-local.properties
+application-local.yml
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
